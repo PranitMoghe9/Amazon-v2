@@ -9,7 +9,8 @@ import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const public_key = process.env.stripe_public_key.toString();
+const stripePromise = loadStripe(public_key);
 //just for stripe public key we are creating a nextjs env variable stripe_public_key
 function Checkout() {
   const items = useSelector(selectItems);
