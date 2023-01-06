@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 stripe.exe
+permissions.json
 
 
 # testing
